@@ -17,7 +17,7 @@ module Admin
     def create
       @user = User.new(user_params)
       if @user.save
-        flash[:notice] = 'Usuário atualizado com sucesso!'
+        flash[:notice] = 'Usuário criado com sucesso!'
         redirect_to admin_users_path
       else
         flash[:alert] = 'Algo deu errado ao criar usuário.'

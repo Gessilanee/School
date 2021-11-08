@@ -10,18 +10,18 @@ class Admin::ClassSchoolsController < Admin::BaseController
   end
 
   def edit
-    @class_school = ClassSchool.find(params[:id])
   end
 
   def show
   end
 
   def create
+    @class_school = ClassSchool.new(class_school_params)
     if @class_school.save
-      flash[:notice] = 'Turma criada com sucesso'
+      flash[:notice] = 'Turma criada com sucesso.'
       redirect_to admin_class_schools_path
     else
-      flash[:alert] = 'Erro ao cadastrar turma, por favor corrigi.'
+      flash[:alert] = 'Erro ao cadastrar Turma, por favor corrigir!.'
       render :new
     end
   end
@@ -47,7 +47,7 @@ class Admin::ClassSchoolsController < Admin::BaseController
 private
   def set_class_school
     @class_school = ClassSchool.find(params[:id])
-  end
+  end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 
   def class_school_params
     params.require(:class_school).permit(:name)
