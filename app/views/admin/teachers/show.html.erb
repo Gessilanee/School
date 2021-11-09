@@ -1,0 +1,45 @@
+<div class="content-wrapper">
+  <%= render partial: 'shared/admin/page_title', locals: { title: 'Alunos' } %>
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-lg-12">
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h5 class="m-0">Detalhes</h5>
+            </div>
+            <div class="card-body">
+              <p>
+                <strong>Nome:</strong>
+                <%= @teacher.name %>
+              </p>
+
+              <p>
+                <strong>Endereço:</strong>
+                <%= @teacher.address %>
+              </p>
+
+              <p>
+                <strong>Telefone:</strong>
+                <%= @teacher.phone %>
+              </p>
+
+              <p>
+                <strong>Disciplina:</strong>
+                <%= @teacher.discipline.name %>
+              </p>
+
+              <p>
+                <strong>Email:</strong>
+                <%= @teacher.user.email %>
+              </p>
+              <%= link_to 'Voltar', admin_teachers_path, class: 'btn btn-primary'%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

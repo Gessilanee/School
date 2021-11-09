@@ -23,7 +23,7 @@ class Admin::StudentsController < Admin::BaseController
   def create
     @student = Student.new(student_params)
     if @student.save
-      flash[:notice] = 'Aluno criado com sucesso.'
+      flash[:notice] = 'Aluno criado com sucesso'
       redirect_to  admin_students_path
     else
       flash[:alert] = 'Erro ao cadastrar aluno, por favor corrigir!.'
@@ -45,7 +45,7 @@ class Admin::StudentsController < Admin::BaseController
   # DELETE /students/1 or /students/1.json
   def destroy
     @student.destroy
-    flash[:notice] = 'Turma excluída com sucesso.'
+    flash[:notice] = 'Aluno excluído com sucesso.'
     redirect_to action: :index
   end
 
