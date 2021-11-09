@@ -1,0 +1,6 @@
+<%= simple_form_for [:admin, @attendance] do |f| %>
+    <%= f.input :frequency %>
+    <%= f.association :student, label_method: :name %>
+    <%= f.association :class_school, label_method: :name %>
+    <%= f.button :submit, class: 'btn btn-primary mt-2' %>
+<% end %>

@@ -1,0 +1,35 @@
+<div class="content-wrapper">
+  <%= render partial: 'shared/admin/page_title', locals: { title: 'Alunos' } %>
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-lg-12">
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h5 class="m-0">Detalhes</h5>
+            </div>
+            <div class="card-body">
+              <p>
+                <strong>Estudante:</strong>
+                <%= @attendance.student.name %>
+              </p>
+
+              <p>
+                <strong>Turma:</strong>
+                <%= @attendance.class_school.name %>
+              </p>
+
+              <p>
+                <strong>Frequência:</strong>
+                <%=  @attendance.frequency %>
+              </p>
+              <%= link_to 'Voltar', admin_attendances_path, class: 'btn btn-primary'%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

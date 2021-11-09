@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  frequency: false
+  student: one
+  class_school: one
+
+two:
+  frequency: false
+  student: two
+  class_school: two
