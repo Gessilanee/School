@@ -1,0 +1,5 @@
+<%= simple_form_for [:admin, @class_school_teacher] do |f| %>
+  <%= f.association :teacher, label_method: :name %>
+  <%= f.association :class_school, label_method: :name %>
+  <%= f.button :submit, class: 'btn btn-primary mt-2' %>
+<% end %>
